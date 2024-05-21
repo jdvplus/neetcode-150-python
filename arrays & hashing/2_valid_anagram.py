@@ -24,7 +24,7 @@ from collections import defaultdict, Counter
 # time complexity - O(n), where n is total number of characters
 # space complexity - O(n), where n is total number of unique characters (max 26)
 
-def valid_anagram(s: str, t: str) -> bool:
+def is_anagram(s: str, t: str) -> bool:
   if len(s) != len(t):
     return False
   
@@ -40,12 +40,12 @@ def valid_anagram(s: str, t: str) -> bool:
     
   return True
 
-print(valid_anagram('anagram', 'nagaram')) # should log: True
-print(valid_anagram('rat', 'car')) # should log: False
+print(is_anagram('anagram', 'nagaram')) # should log: True
+print(is_anagram('rat', 'car')) # should log: False
 
 # solution using Counter dict subclass (counts hashable objects)
-def valid_anagram2(s: str, t: str) -> bool:
+def is_anagram2(s: str, t: str) -> bool:
   return Counter(s) == Counter(t)
 
-print(valid_anagram2('anagram', 'nagaram')) # should log: True
-print(valid_anagram2('rat', 'car')) # should log: False
+print(is_anagram2('anagram', 'nagaram')) # should log: True
+print(is_anagram2('rat', 'car')) # should log: False
