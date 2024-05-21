@@ -43,6 +43,7 @@ print(isAnagram('anagram', 'nagaram')) # should log: True
 print(isAnagram('rat', 'car')) # should log: False
 
 def isAnagram2(s: str, t: str) -> bool:
+  # using Counter dict subclass (counts hashable objects)
   return Counter(s) == Counter(t)
 
 print(isAnagram2('anagram', 'nagaram')) # should log: True
