@@ -30,6 +30,9 @@ Only one valid answer exists.
 
 from typing import List
 
+# time complexity - O(n)
+# space complexity - O(n)
+
 def twoSum(nums: List[int], target: int) -> List[int]:
   hash_map = {}
 
@@ -42,3 +45,14 @@ def twoSum(nums: List[int], target: int) -> List[int]:
 print(twoSum([2,7,11,15], 9)) # should log: [0, 1]
 print(twoSum([3,2,4], 6)) # should log: [1, 2]
 print(twoSum([3,3], 6)) # should log: [0, 1]
+
+# brute force solution - O(n^2) time complexity, O(1) space complexity
+def twoSum2(nums: List[int], target: int) -> List[int]:
+  for i in range(len(nums)):
+    for j in range(i + 1, len(nums)):
+      if nums[i] + nums[j] == target:
+        return [i, j]
+      
+print(twoSum2([2,7,11,15], 9)) # should log: [0, 1]
+print(twoSum2([3,2,4], 6)) # should log: [1, 2]
+print(twoSum2([3,3], 6)) # should log: [0, 1]
