@@ -24,6 +24,9 @@ Constraints:
 
 from typing import List
 
+# time complexity - O(n)
+# space complexity - O(n)
+
 def containsDuplicate(nums: List[int]) -> bool:
   if len(nums) < 2 or len(nums) == len(set(nums)):
     return False
