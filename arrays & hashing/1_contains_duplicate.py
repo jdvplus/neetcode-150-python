@@ -1,6 +1,5 @@
 '''
 https://leetcode.com/problems/contains-duplicate/description/
-
 217. Contains Duplicate
 
 Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
@@ -27,16 +26,16 @@ from typing import List
 # time complexity - O(n)
 # space complexity - O(n)
 
-def containsDuplicate(nums: List[int]) -> bool:
+def contains_duplicate(nums: List[int]) -> bool:
   if len(nums) < 2 or len(nums) == len(set(nums)):
     return False
   
   return True
 
-print(containsDuplicate([1,2,3,1])) # should log: True
-print(containsDuplicate([1,2,3,4])) # should log: False
+print(contains_duplicate([1,2,3,1])) # should log: True
+print(contains_duplicate([1,2,3,4])) # should log: False
 
-def containsDuplicate2(nums: List[int]) -> bool:
+def contains_duplicate2(nums: List[int]) -> bool:
   if len(nums) < 2:
     return False
   
@@ -50,5 +49,5 @@ def containsDuplicate2(nums: List[int]) -> bool:
   
   return False
 
-print(containsDuplicate2([1,2,3,1])) # should log: True
-print(containsDuplicate2([1,2,3,4])) # should log: False
+print(contains_duplicate2([1,2,3,1])) # should log: True
+print(contains_duplicate2([1,2,3,4])) # should log: False

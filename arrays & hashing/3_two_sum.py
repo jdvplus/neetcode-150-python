@@ -1,4 +1,5 @@
 '''
+https://leetcode.com/problems/two-sum/description/
 1. Two Sum
 
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -33,7 +34,7 @@ from typing import List
 # time complexity - O(n)
 # space complexity - O(n)
 
-def twoSum(nums: List[int], target: int) -> List[int]:
+def two_sum(nums: List[int], target: int) -> List[int]:
   hash_map = {}
 
   for i, n in enumerate(nums):
@@ -42,17 +43,17 @@ def twoSum(nums: List[int], target: int) -> List[int]:
       return [hash_map[complement], i]
     hash_map[n] = i
 
-print(twoSum([2,7,11,15], 9)) # should log: [0, 1]
-print(twoSum([3,2,4], 6)) # should log: [1, 2]
-print(twoSum([3,3], 6)) # should log: [0, 1]
+print(two_sum([2,7,11,15], 9)) # should log: [0, 1]
+print(two_sum([3,2,4], 6)) # should log: [1, 2]
+print(two_sum([3,3], 6)) # should log: [0, 1]
 
 # brute force solution - O(n^2) time complexity, O(1) space complexity
-def twoSum2(nums: List[int], target: int) -> List[int]:
+def two_sum2(nums: List[int], target: int) -> List[int]:
   for i in range(len(nums)):
     for j in range(i + 1, len(nums)):
       if nums[i] + nums[j] == target:
         return [i, j]
       
-print(twoSum2([2,7,11,15], 9)) # should log: [0, 1]
-print(twoSum2([3,2,4], 6)) # should log: [1, 2]
-print(twoSum2([3,3], 6)) # should log: [0, 1]
+print(two_sum2([2,7,11,15], 9)) # should log: [0, 1]
+print(two_sum2([3,2,4], 6)) # should log: [1, 2]
+print(two_sum2([3,3], 6)) # should log: [0, 1]
