@@ -32,3 +32,20 @@ def containsDuplicate(nums: List[int]) -> bool:
 
 print(containsDuplicate([1,2,3,1])) # should log: True
 print(containsDuplicate([1,2,3,4])) # should log: False
+
+def containsDuplicate2(nums: List[int]) -> bool:
+  if len(nums) < 2:
+    return False
+  
+  unique = set()
+
+  for n in nums:
+    if n in unique:
+      return True
+    
+    unique.add(n)
+  
+  return False
+
+print(containsDuplicate2([1,2,3,1])) # should log: True
+print(containsDuplicate2([1,2,3,4])) # should log: False
