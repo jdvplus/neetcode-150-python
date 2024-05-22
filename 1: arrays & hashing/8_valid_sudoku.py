@@ -48,6 +48,10 @@ board[i][j] is a digit 1-9 or '.'.
 from typing import List
 from collections import defaultdict
 
+# time complexity - O(1)
+# space complexity - O(1)
+  # both O(1) because board size is fixed at 9x9
+
 def valid_sudoku(board: List[List[str]]) -> bool:
   # create dicts to hold rows, cols, and sub-boxes
     # keys - row/col/sub-box indexes

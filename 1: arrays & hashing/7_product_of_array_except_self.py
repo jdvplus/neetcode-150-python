@@ -26,6 +26,9 @@ Follow up: Can you solve the problem in O(1) extra space complexity? (The output
 
 from typing import List
 
+# time complexity - O(n)
+# space complexity - O(1), not counting output array
+
 def product_except_self(nums: List[int]) -> List[int]:
   ans = [1] * len(nums)
 
