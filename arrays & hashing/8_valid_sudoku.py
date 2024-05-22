@@ -63,6 +63,7 @@ def valid_sudoku(board: List[List[str]]) -> bool:
   for r in range(9):
     for c in range(9):
       val = board[r][c]
+      
       if val == '.': 
         continue
       
