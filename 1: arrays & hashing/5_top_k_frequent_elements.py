@@ -46,11 +46,10 @@ def top_k_frequent(nums: List[int], k: int) -> List[int]:
   # (can disregard 0th list, because num freq will never be 0)
   for i in range(len(freq_buckets) - 1, 0, -1):
     # if number exists in bucket, push into result
-    # once res length becomes equal to k, return result
     for n in freq_buckets[i]:
       res.append(n)
 
-      if len(res) == k:
+      if len(res) == k: # once res length becomes equal to k, return result
         return res
       
 print(top_k_frequent([1,1,1,2,2,3], 2)) # should log: [1, 2]

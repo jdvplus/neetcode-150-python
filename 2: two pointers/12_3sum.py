@@ -42,11 +42,9 @@ def three_sum(nums: List[int]) -> List[List[int]]:
 
   for i, n in enumerate(nums):
     # edge cases:
-      # 1. if curr num is greater than 0, no other possible triplets
-      # 2. ensure no duplicate triplets
-    if n > 0:
+    if n > 0: # 1. if curr num is greater than 0, no other possible triplets
       return res
-    if i > 0 and n == nums[i - 1]:
+    if i > 0 and n == nums[i - 1]: # 2. ensure no duplicate triplets
       continue
 
     l, r = i + 1, len(nums) - 1

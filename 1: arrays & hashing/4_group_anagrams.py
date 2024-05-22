@@ -40,8 +40,8 @@ def group_anagrams(strs: List[str]) -> List[List[str]]:
     count = [0] * 26
 
     for char in s:
-      # (ord returns unicode num representation of char)
       # update value of curr character in curr string
+      # (ord returns unicode num representation of char)
       count[ord(char) - ord('a')] += 1
 
     # create k-v pairs in res dict such that:
