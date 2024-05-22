@@ -39,8 +39,10 @@ def two_sum(nums: List[int], target: int) -> List[int]:
 
   for i, n in enumerate(nums):
     complement = target - n
+
     if complement in hash_map:
       return [hash_map[complement], i]
+    
     hash_map[n] = i
 
 print(two_sum([2,7,11,15], 9)) # should log: [0, 1]
