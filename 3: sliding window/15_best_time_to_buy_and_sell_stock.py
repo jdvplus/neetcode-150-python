@@ -36,6 +36,7 @@ def max_profit(prices: List[int]) -> int:
   for i in range(1, len(prices)):
     if prices[i] > min_price:
       profit = max(profit, prices[i] - min_price)
+      
     min_price = min(min_price, prices[i])
 
   return profit
