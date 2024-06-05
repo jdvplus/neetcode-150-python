@@ -19,7 +19,6 @@ Example 3:
 Input: s = "pwwkew"
 Output: 3
 Explanation: The answer is "wke", with the length of 3.
-
 Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
 Constraints:
@@ -52,7 +51,6 @@ print(length_of_longest_substring('bbbbb')) # should log: 1
 print(length_of_longest_substring('pwwkew')) # should log: 3
 
 # brute force / intuitive solution - O(n) time complexity, O(n) space complexity
-
 def length_of_longest_substring2(s: str) -> int:
   if not s:
     return 0
