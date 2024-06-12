@@ -29,16 +29,17 @@ s consists of English letters, digits, symbols and spaces.
 from collections import defaultdict
 
 # time complexity - O(n)
-# space complexity O(n)
+# space complexity - O(n)
 
 def length_of_longest_substring(s: str) -> int:
   seen = set()
   l = 0
   res = 0
 
+  # initialize both L & R pointers at beginning of string
   for r in range(len(s)):
     while s[r] in seen:
-      seen.remove(s[l])
+      seen.remove(s[l]) # s[l] must be the same as s[r], so remove it
       l += 1
     
     seen.add(s[r])
